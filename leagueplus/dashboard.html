@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>League Plus Engine</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="dashboard.css">
+<style>
+  .logo.lp{background:#f5b942;color:#141004;font-size:18px}
+  .odd{display:inline-block;min-width:46px;text-align:center;padding:2px 4px;border-radius:5px;background:var(--panel2);font-weight:700}
+  .odd.val{background:var(--acc);color:#04120a}
+  .cd{font-variant-numeric:tabular-nums;font-weight:800}
+  .gm{color:var(--mute);font-size:12px}
+  .navlink{color:var(--mute);text-decoration:none;margin-right:14px;font-weight:600}
+  .navlink:hover{color:var(--text)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo lp">L+</span><div><b>League Plus Stats &amp; Prediction Engine</b><small id="syncLine">Loading…</small></div></div>
+  <div class="actions"><a class="navlink" href="../zoom/dashboard.html">⚽ Zoom</a><a class="navlink" href="../zoom/tennis.html">🎾 Tennis</a><a class="navlink" href="../index.html">⌂ Home</a><button id="btnSync" class="btn">⟳ Capture now</button></div>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="on">Overview</button>
+  <button data-tab="next">⚡ Next round</button>
+  <button data-tab="slip">🧾 Slip builder</button>
+  <button data-tab="value">💰 Value finder</button>
+  <button data-tab="results">Results</button>
+  <button data-tab="tables">Tables &amp; teams</button>
+  <button data-tab="settings">⚙ Settings</button>
+</nav>
+<main id="view"></main>
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="x" id="modalX">✕</button><div id="modalBody"></div></div></div>
+<script src="../shared/chrome-shim.js"></script>
+<script src="../shared/net.js"></script>
+<script src="../shared/server.js"></script>
+<script src="../shared/seed.js"></script>
+<script src="lib/core.js"></script>
+<script src="lib/model.js"></script>
+<script src="lib/slip.js"></script>
+<script src="../shared/boot-leagueplus.js"></script>
+<script src="dashboard.js"></script>
+<script src="../shared/ui-connect.js"></script>
+</body>
+</html>

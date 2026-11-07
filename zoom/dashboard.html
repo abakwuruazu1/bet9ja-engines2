@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoom Stats Engine</title>
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">Z</span><div><b>Zoom Stats &amp; Prediction Engine</b><small id="syncLine">Loading…</small></div></div>
+  <div class="actions">
+    <a href="tennis.html" style="color:var(--mute);text-decoration:none;margin-right:14px;font-weight:600">🎾 Tennis engine</a>
+    <a href="../leagueplus/dashboard.html" style="color:var(--mute);text-decoration:none;margin-right:14px;font-weight:600">L+ League Plus</a>
+    <a href="../index.html" style="color:var(--mute);text-decoration:none;margin-right:14px;font-weight:600">⌂ Home</a>
+    <button id="btnSync" class="btn">⟳ Capture now</button>
+  </div>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="on">Overview</button>
+  <button data-tab="league">League stats</button>
+  <button data-tab="team">Team stats</button>
+  <button data-tab="results">Results</button>
+  <button data-tab="predict">🎯 Predictor</button>
+  <button data-tab="board">📋 Round board</button>
+  <button data-tab="slip">🧾 Slip builder</button>
+  <button data-tab="backtest">🧪 Backtest</button>
+  <button data-tab="settings">⚙ Settings</button>
+</nav>
+<main id="view"></main>
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="x" id="modalX">✕</button><div id="modalBody"></div></div></div>
+
+<script src="../shared/chrome-shim.js"></script>
+<script src="../shared/net.js"></script>
+<script src="../shared/seed.js"></script>
+<script src="lib/settings.js"></script>
+<script src="lib/db.js"></script>
+<script src="lib/parse.js"></script>
+<script src="lib/markets.js"></script>
+<script src="lib/model.js"></script>
+<script src="lib/stats.js"></script>
+<script src="lib/fixtures.js"></script>
+<script src="lib/live.js"></script>
+<script src="lib/slip.js"></script>
+<script src="lib/api.js"></script>
+<script src="lib/sync.js"></script>
+<script src="tennis/lib/tcore.js"></script>
+<script src="../shared/boot-zoom.js"></script>
+<script src="dashboard.js"></script>
+<script src="dashboard-live.js"></script>
+<script src="dashboard-slip.js"></script>
+<script src="../shared/ui-connect.js"></script>
+</body>
+</html>

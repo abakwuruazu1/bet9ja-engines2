@@ -1,0 +1,16 @@
+{
+  "name": "bet9ja-engines",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hosted Zoom Soccer, Zoom Tennis and League Plus stats & prediction engines",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "relay": "node scripts/proxy-local.mjs",
+    "capture": "node scripts/capture.mjs",
+    "check": "node scripts/check-page.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

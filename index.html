@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bet9ja Virtual Engines — Stats &amp; Prediction</title>
+<meta name="description" content="Zoom Soccer, Zoom Tennis and League Plus stats and prediction engines. Runs in your browser, hosted on GitHub Pages.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Bet9ja virtual sports · stats &amp; prediction</div>
+    <h1>Three engines.<br>One browser tab.</h1>
+    <p class="lead">Every stat the Zoom Soccer, Zoom Tennis and League Plus feeds publish, recorded in your
+    browser and turned into probabilities, value picks, slip builds and backtests. No extension, no install.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="zoom/dashboard.html">Open Zoom Soccer →</a>
+      <a class="btn" href="zoom/tennis.html">Open Zoom Tennis</a>
+      <a class="btn" href="leagueplus/dashboard.html">Open League Plus</a>
+    </div>
+    <div class="badges">
+      <span>● Starter data bundled</span>
+      <span>● Runs locally in your browser</span>
+      <span>● No account, no tracking</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="cards">
+    <a class="card zoom" href="zoom/dashboard.html">
+      <div class="icon">Z</div>
+      <h2>Zoom Soccer</h2>
+      <p>All 8 Zoom leagues, current and previous season. Goals, corners, scorers, possession, shots,
+      site win probabilities, tables. Poisson / Form / Blend engines, a round board, slip builder and
+      walk-forward backtests.</p>
+      <ul>
+        <li>Predictor with fair odds &amp; edge calculator</li>
+        <li>Slip builder at any target total odds</li>
+        <li>Backtest and calibration for every market</li>
+      </ul>
+      <span class="go">Open dashboard →</span>
+    </a>
+
+    <a class="card tennis" href="zoom/tennis.html">
+      <div class="icon">🎾</div>
+      <h2>Zoom Tennis</h2>
+      <p>Four 64-player tournaments, every set and point recorded. An exact Markov model prices match
+      winner, sets, games, handicaps, tie-breaks and correct score, plus a tournament-winner projection.</p>
+      <ul>
+        <li>Serve / return ratings fitted on every point</li>
+        <li>Exact point → game → set → match model</li>
+        <li>Backtest vs historical base rates</li>
+      </ul>
+      <span class="go">Open dashboard →</span>
+    </a>
+
+    <a class="card lp" href="leagueplus/dashboard.html">
+      <div class="icon">L+</div>
+      <h2>League Plus</h2>
+      <p>Bet9ja's League Plus virtual football: every league, every round, with Bet9ja's real odds for
+      every market. Market model, team ratings, value finder and a slip builder that uses the real prices.</p>
+      <ul>
+        <li>Next round with odds, chance and edge</li>
+        <li>Value finder over recorded rounds</li>
+        <li>Slip builder at your target total odds</li>
+      </ul>
+      <span class="go">Open dashboard →</span>
+    </a>
+  </section>
+
+  <section class="how">
+    <h2>How the hosted version works</h2>
+    <div class="steps">
+      <div class="step">
+        <b>1 · Open a dashboard</b>
+        <p>The starter database is bundled with the page, so the tables, ratings, predictors and
+        backtests work immediately — even before anything new is captured.</p>
+      </div>
+      <div class="step">
+        <b>2 · Connect the relay (once)</b>
+        <p>Bet9ja's feeds do not allow direct browser requests from another domain. A tiny free relay
+        (included in <code>proxy/worker.js</code>) forwards only the Bet9ja hosts and adds the missing
+        CORS header. Paste its URL in the <b>Connect live capture</b> pill.</p>
+      </div>
+      <div class="step">
+        <b>3 · Keep the tab open</b>
+        <p>While a dashboard is open it captures new rounds automatically — every ~3 minutes for Zoom,
+        ~20 seconds for League Plus. Data is stored in this browser's IndexedDB; export a backup from
+        Settings whenever you like.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="honest">
+    <h2>Honest notes</h2>
+    <p>These are statistical tools, not a guaranteed income. Bet9ja keeps a margin on every price —
+    roughly 5% on 1X2, GG/NG and over/under, and much more on correct score. The backtests in each
+    dashboard show what the engines actually did on recorded data; trust those numbers, not the
+    marketing. Stake only what you can afford to lose. 18+.</p>
+    <p class="mute">Live in-play is not part of the hosted build: it read the Bet9ja page's own push
+    feed through an injected content script, which a normal website cannot do. Everything else —
+    history, tables, ratings, predictions, value, slips and backtests — is here.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Bet9ja Virtual Engines</span>
+  <span>Data belongs to Bet9ja. This project is unofficial and not affiliated with Bet9ja.</span>
+</footer>
+</body>
+</html>

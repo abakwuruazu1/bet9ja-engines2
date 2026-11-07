@@ -1,0 +1,16 @@
+# Cloudflare Worker + D1 + cron: 24/7 League Plus collector (and CORS relay).
+# 1. npx wrangler d1 create bet9ja-collector
+# 2. Paste the returned database_id below.
+# 3. npx wrangler d1 migrations apply bet9ja-collector --remote
+# 4. npx wrangler deploy
+name = "bet9ja-collector"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bet9ja-collector"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[triggers]
+crons = ["* * * * *"]

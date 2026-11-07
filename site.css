@@ -1,0 +1,90 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #131a23;
+  --panel2: #1a2330;
+  --line: #263142;
+  --text: #e8eef5;
+  --mute: #93a1b3;
+  --green: #1fd17a;
+  --gold: #f5b942;
+  --blue: #4ea1ff;
+  --tennis: #e5d84a;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+a { color: inherit; }
+
+.hero {
+  background:
+    radial-gradient(900px 420px at 12% -10%, #0f4a2d 0%, transparent 60%),
+    radial-gradient(700px 360px at 92% 0%, #233a12 0%, transparent 55%),
+    linear-gradient(180deg, #0d131a, var(--bg));
+  border-bottom: 1px solid var(--line);
+  padding: 72px 0 46px;
+}
+.eyebrow { color: var(--green); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.03; margin: 12px 0 18px; letter-spacing: -.03em; }
+.lead { max-width: 720px; color: #c3cedb; font-size: 19px; margin: 0 0 28px; }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; text-decoration: none; padding: 11px 18px; border-radius: 9px;
+  border: 1px solid var(--line); background: var(--panel); font-weight: 700; font-size: 15px;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.btn:hover { transform: translateY(-1px); border-color: #3a4a61; }
+.btn.primary { background: var(--green); border-color: var(--green); color: #04120a; }
+.btn.primary:hover { filter: brightness(1.06); }
+.badges { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 26px; color: var(--mute); font-size: 13px; }
+
+main { padding: 48px 0 24px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.card {
+  position: relative; display: flex; flex-direction: column; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 16px; padding: 24px; text-decoration: none;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.card:hover { transform: translateY(-3px); border-color: #3a4a61; }
+.card::after { content: ""; position: absolute; inset: 0 0 auto; height: 3px; border-radius: 16px 16px 0 0; opacity: .9; }
+.card.zoom::after { background: var(--green); }
+.card.tennis::after { background: var(--tennis); }
+.card.lp::after { background: var(--gold); }
+.card .icon {
+  width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+  font-weight: 900; font-size: 21px; margin-bottom: 14px; color: #06120b; background: var(--green);
+}
+.card.tennis .icon { background: var(--tennis); color: #1b1a05; }
+.card.lp .icon { background: var(--gold); color: #141004; font-size: 18px; }
+.card h2 { margin: 0 0 8px; font-size: 23px; }
+.card p { color: #bcc8d6; margin: 0 0 12px; font-size: 15px; }
+.card ul { margin: 0 0 22px; padding-left: 18px; color: var(--mute); font-size: 14px; }
+.card li { margin: 5px 0; }
+.card .go { margin-top: auto; font-weight: 800; font-size: 14px; color: var(--green); }
+.card.tennis .go { color: var(--tennis); }
+.card.lp .go { color: var(--gold); }
+
+.how { margin-top: 56px; }
+.how h2, .honest h2 { font-size: 26px; margin: 0 0 18px; letter-spacing: -.01em; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.step { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.step b { display: block; margin-bottom: 7px; font-size: 16px; }
+.step p { margin: 0; color: #b7c3d1; font-size: 14.5px; }
+.step code { background: #0a0e13; border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; font-size: 13px; }
+
+.honest { margin-top: 52px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.honest p { color: #c3cedb; margin: 0 0 12px; }
+.honest p.mute { color: var(--mute); font-size: 14px; margin-bottom: 0; }
+
+footer {
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  border-top: 1px solid var(--line); margin-top: 54px; padding: 22px; color: var(--mute); font-size: 13px;
+}
+@media (max-width: 640px) {
+  .hero { padding: 48px 0 34px; }
+  .badges { gap: 10px; }
+}

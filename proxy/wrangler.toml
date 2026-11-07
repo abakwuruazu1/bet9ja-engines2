@@ -1,0 +1,7 @@
+# Deploy from this folder with:  npx wrangler deploy
+# Or ignore this file and paste worker.js into the Cloudflare dashboard (Workers & Pages → Create).
+name = "bet9ja-relay"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+workers_dev = true
